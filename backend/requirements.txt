@@ -1,0 +1,2 @@
+flask==latest
+flask_cors==latest

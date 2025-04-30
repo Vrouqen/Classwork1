@@ -1,0 +1,13 @@
+services:
+
+  backend:
+    container_name: backend
+    build: ./backend
+    ports:
+      -"666:666"
+    networks:
+      - red
+
+networks:
+  red:
+    bridge
