@@ -1,13 +1,10 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
+from flask import Flask, render_template
 
-app = Flask(__name__)
-CORS(app)
+app = "__name__"
 
-
-@app.route("/", methods=['GET'])
-def load_user():
-    datos =[
+@app.route("/")
+def index():
+    datos = [
         {'id':1,
          'name':'Vrouqen',
          'description':'Me gusta programar'
@@ -25,7 +22,7 @@ def load_user():
          'description':'No confíen en mí'
          }
     ]
-    return jsonify({'value':datos})
+    return render_template("index.html",datos)
 
-if __name__=="__main__":
-    app.run(debug=True, host="0.0.0.0", port="8081")
+if __name__ == "__main__":
+    app.run(debug = True, host = "0.0.0.0", port = "777")
