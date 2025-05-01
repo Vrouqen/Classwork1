@@ -7,6 +7,16 @@ services:
       -"666:666"
     networks:
       - red
+  
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    ports:
+      -"777:777"
+    networks:
+      - red
+    depends_on:
+      - backend
 
 networks:
   red:
