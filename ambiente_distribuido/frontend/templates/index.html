@@ -11,11 +11,11 @@
     <script>
         document.addEventListener("DOMContentLoaded", async()=>{
             peticion = await fetch("http://localhost:666");
-            datos = await peticion.json;
+            datos = await peticion.json();
 
             const usuarios = document.getElementById("usuarios");
 
-            for(const usuario of datos){
+            for(const usuario of datos.result){
                 const row = document.createElement("tr");
                 row.innerHTML = `
                     <td>${usuario.id}</td>

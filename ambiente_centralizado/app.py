@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-app = "__name__"
+app = Flask(__name__)
 
 @app.route("/")
 def index():
@@ -22,7 +22,7 @@ def index():
          'description':'No confíen en mí'
          }
     ]
-    return render_template("index.html",datos)
+    return render_template("index.html", datos=datos)
 
 if __name__ == "__main__":
-    app.run(debug = True, host = "0.0.0.0", port = "777")
+    app.run(debug = True, host = "0.0.0.0", port = "555")

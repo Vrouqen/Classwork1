@@ -4,20 +4,20 @@ services:
     container_name: backend
     build: ./backend
     ports:
-      -"666:666"
+      - "666:666"
     networks:
-      - red
+      - app-net
   
   frontend:
     container_name: frontend
     build: ./frontend
     ports:
-      -"777:777"
+      - "777:777"
     networks:
-      - red
+      - app-net
     depends_on:
       - backend
 
 networks:
-  red:
-    bridge
+  app-net:
+    driver: bridge
