@@ -10,7 +10,8 @@
     <div id="usuarios"></div>
     <script>
         document.addEventListener("DOMContentLoaded", async()=>{
-            peticion = await fetch("http://localhost:666");
+            peticion = await fetch("https://backendvrouqen.up.railway.app/");
+            //peticion = await fetch("http://localhost:666");
             datos = await peticion.json();
 
             const usuarios = document.getElementById("usuarios");
